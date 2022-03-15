@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polito.tdp.alien.FXMLController">
@@ -12,4 +17,19 @@
          </font>
       </Label>
    </top>
+   <center>
+      <VBox prefHeight="171.0" prefWidth="375.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Testo Alieno" />
+                  <TextField fx:id="txtTesto" prefHeight="25.0" prefWidth="219.0" translateX="20.0" />
+                  <Button fx:id="btnTraduci" mnemonicParsing="false" onAction="#handleTraduci" text="Traduci" translateX="35.0" />
+               </children>
+            </HBox>
+            <TextArea fx:id="txtTraduzione" prefHeight="200.0" prefWidth="200.0" />
+            <Button fx:id="btnClear" mnemonicParsing="false" onAction="#handeClear" text="Clear" />
+         </children>
+      </VBox>
+   </center>
 </BorderPane>
